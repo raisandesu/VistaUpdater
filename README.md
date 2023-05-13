@@ -4,6 +4,7 @@
 - Visual Studio 2022
   - .NET のデスクトップ開発
   - .NET Framework v3.0
+  
 Windows Vista は最初から .NET Framework v3.0 が入っているので、3.0を使っています。
 ## このツールについて
 このツールは、Windows Vista の自動更新（Windows Update）を復活させます。
@@ -15,4 +16,5 @@ Windows Vista は最初から .NET Framework v3.0 が入っているので、3.0
 ### システム要件
 - Windows Vista **Service Pack 2**
 - 64bit オペレーティング・システム
+- 
 このくらいです。
