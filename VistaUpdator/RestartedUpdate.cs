@@ -19,7 +19,7 @@ namespace VistaUpdater
 
         private void RestartedUpdate_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = this.Size;
+                this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
             FileVersionInfo myFileVersionInfo = FileVersionInfo.GetVersionInfo("C:\\Program Files\\Internet Explorer\\iexplore.exe");
             if (myFileVersionInfo.FileVersion.Contains("9.0"))

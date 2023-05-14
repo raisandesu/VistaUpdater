@@ -33,16 +33,22 @@ namespace VistaUpdater
             listBox1.Items.Add("Windows Update パッチをインストールしています... 1/2");
             Extract("VistaUpdater", "C:\\Program Files\\VistaUpdater\\Patches", "Resources", "Vista_SHA2_WUC.zip");
             Extract("VistaUpdater", "C:\\Program Files\\VistaUpdater\\Patches", "Resources", "PsExec.exe");
-            MemoryStream ms = new MemoryStream();
-            StreamWriter sw = new StreamWriter(ms);
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                StreamWriter sw = new StreamWriter(ms);
 
-            ReadOptions options = new ReadOptions();
-            options.StatusMessageWriter = sw;
-            ZipFile zf = ZipFile.Read("C:\\Program Files\\VistaUpdater\\Patches\\Vista_SHA2_WUC.zip", options);
+                ReadOptions options = new ReadOptions();
+                options.StatusMessageWriter = sw;
+                ZipFile zf = ZipFile.Read("C:\\Program Files\\VistaUpdater\\Patches\\Vista_SHA2_WUC.zip", options);
 
-            zf.ExtractAll(extractPath);
+                zf.ExtractAll(extractPath);
 
-            ms.Seek(0, 0);
+                ms.Seek(0, 0);
+            } catch (Exception)
+            {
+                
+            }
 
             update();
         }
